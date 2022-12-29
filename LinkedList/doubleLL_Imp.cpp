@@ -54,7 +54,7 @@ void insertAfter(node *prev_node, int new_data)
     }
 }
 
-//inset at last
+// inset at last
 void append(node **head_ref, int new_data)
 {
     node *new_node = new node();
