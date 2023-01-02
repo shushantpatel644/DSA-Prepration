@@ -1,4 +1,4 @@
-#include <iostream>
+#include <stdio.h>
 
 void printArray(int *A, int n)
 {
