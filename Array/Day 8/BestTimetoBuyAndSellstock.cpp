@@ -15,3 +15,6 @@ public:
         return maxiumProfit;
     }
 }
+
+// tc = o(n)
+//sc = o(1)
