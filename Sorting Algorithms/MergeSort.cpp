@@ -118,3 +118,194 @@ int main()
 //         Merege(A, l, mid, h);
 //     }
 // }
+
+/* void inorder(TreeNode *root , vector<int> &inorderVal){
+        if(root == NULL)
+            return ;
+
+        inorder(root->left , inorderVal);
+        inorderVal.push_back(root->val);
+        inorder(root->right , inorderVal);
+
+    }
+
+    vector<int> mergeArrays(vector<int> &a , vector<int> &b){
+        vector<int> ans(a.size() + b.size());
+
+        int i = 0 , j = 0 , k = 0;
+
+        while(i < a.size() && j < b.size()){
+            if(a[i] < b[j]){
+                ans[k++] = a[i];
+                i++;
+            }
+            else{
+                ans[k++] = b[j];
+                j++;
+            }
+        }
+
+        while(i < a.size()){
+            ans[k++] = a[i];
+            i++;
+        }
+
+        while(j < b.size()){
+            ans[k++] = b[j];
+            j++;
+        }
+        return ans;
+    }
+
+    vector<int> getAllElements(TreeNode* root1, TreeNode* root2) {
+        vector<int> in1 , in2;
+        inorder(root1 , in1);
+        inorder(root2 , in2);
+
+        //merge 2 sorted arrays
+        vector<int> ans = mergeArrays(in1 , in2);
+        return ans;
+    }
+};*/
+
+/*
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+
+/*
+class Solution {
+public:
+    void inorderTraversal(TreeNode* root,vector<int> &val){
+
+        if(root==NULL)
+            return;
+
+        inorderTraversal(root->left,val);
+        val.push_back(root->val);
+        inorderTraversal(root->right,val);
+    }
+    vector<int> mergedTree(vector<int> &vec1,vector<int> &vec2){
+        vector<int>ans(vec1.size()+vec2.size());
+
+        int i=0,j=0,k=0;
+
+        while(i < vec1.size() && j < vec2.size()){
+            if(vec1[i] < vec2[j]){
+                ans[k++] = vec1[i];
+                // k++;
+                i++;
+            }
+            else
+                ans[k++] = vec2[j];{
+            // k++;
+            j++;
+        }
+        }
+
+        while(i < vec1.size()){
+            ans[k++] = vec1[i];
+            // k++;
+            i++;
+        }
+
+        while(j < vec2.size()){
+            ans[k++] = vec2[j];
+            // k++;
+            j++;
+        }
+        return ans;
+    }
+    vector<int> getAllElements(TreeNode* root1, TreeNode* root2) {
+        vector<int> tree1,tree2;
+        inorderTraversal(root1,tree1);
+        inorderTraversal(root2,tree2);
+
+        vector<int> ans = mergedTree(tree1,tree2);
+        return ans;
+    }
+};
+*/
+
+/*
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution
+{
+public:
+    void inorderTraversal(TreeNode *root, vector<int> &val)
+    {
+
+        if (root == NULL)
+            return;
+
+        inorderTraversal(root->left, val);
+        val.push_back(root->val);
+        inorderTraversal(root->right, val);
+    }
+    vector<int> mergedTree(vector<int> &vec1, vector<int> &vec2)
+    {
+        vector<int> ans(vec1.size() + vec2.size());
+
+        int i = 0, j = 0, k = 0;
+
+        while (i < vec1.size() && j < vec2.size())
+        {
+            if (vec1[i] < vec2[j])
+            {
+                ans[k++] = vec1[i];
+                // k++;
+                i++;
+            }
+            else
+                ans[k++] = vec2[j];
+            {
+                // k++;
+                j++;
+            }
+        }
+
+        while (i < vec1.size())
+        {
+            ans[k++] = vec1[i];
+            // k++;
+            i++;
+        }
+
+        while (j < vec2.size())
+        {
+            ans[k++] = vec2[j];
+            // k++;
+            j++;
+        }
+        return ans;
+    }
+    vector<int> getAllElements(TreeNode *root1, TreeNode *root2)
+    {
+        vector<int> tree1, tree2;
+        inorderTraversal(root1, tree1);
+        inorderTraversal(root2, tree2);
+
+        vector<int> ans = mergedTree(tree1, tree2);
+        return ans;
+    }
+};
+
+* /
