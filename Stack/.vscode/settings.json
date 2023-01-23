@@ -1,6 +1,11 @@
 {
     "files.associations": {
         "*.java": "java",
-        "vector": "cpp"
+        "vector": "cpp",
+        "deque": "cpp",
+        "stack": "cpp",
+        "xlocinfo": "cpp",
+        "xstring": "cpp",
+        "xutility": "cpp"
     }
 }
