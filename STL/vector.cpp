@@ -21,6 +21,3 @@ vector<int> v1(5,20);
 // {20,20,20,20,20};
 vector<int>v2(v1)
 // copy of v1 vector in v2 {20,20,20,20,20};
-
-
-v.begin();

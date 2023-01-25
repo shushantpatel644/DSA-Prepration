@@ -37,6 +37,7 @@ for (auto it : v)
 // auto means it will asign automatically i:e -: auto a= "raj" it will assign as a string automatically
 
 // deletion of vector
+
 // 1st method
 // {10,20,12,23} v pointing 20 coz v.begin()+1 ..
 v.erase(v.begin() + 1);
@@ -47,6 +48,7 @@ v.erase(v.begin() + 2, v.begin() + 4);
 // after deletion array will look like this=  {10 20 35}
 
 // insert funtion
+
 vector<int> v(2, 100);          //{100,100};
 v.insert(v.begin(), 300);       //{300,100,100};
 v.insert(v.begin() + 1, 2, 10); //{300,10,10,100,100};
@@ -67,4 +69,3 @@ v1.swap(v2); // v1-> {30,40} , v2->{10,20}
 v.clear(); // erases the entire vector
 
 cout << v.empty();
-
