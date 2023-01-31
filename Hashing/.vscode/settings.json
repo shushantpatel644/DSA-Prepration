@@ -2,6 +2,7 @@
     "files.associations": {
         "*.java": "java",
         "list": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "unordered_map": "cpp"
     }
 }
