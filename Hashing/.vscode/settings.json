@@ -3,6 +3,7 @@
         "*.java": "java",
         "list": "cpp",
         "ostream": "cpp",
-        "unordered_map": "cpp"
+        "unordered_map": "cpp",
+        "utility": "cpp"
     }
 }
